@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大湫宿　丸森</title>
+<script>
+  function today() {
+    const now = new Date();
+
+    const month = now.getMonth() + 1; // 月（0から始まるので+1）
+    const day = now.getDate();        // 日
+
+    document.getElementById("result").textContent =
+      "今日は" + month + "月" + day + "日です";
+  }
+</script>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #a4d358;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .card1 {
+      max-width: 700px;
+      margin: auto;
+      background:white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card2 {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    img {
+       width: 300px;      /* 横幅を300ピクセルにする */
+    display: block;    /* 真ん中寄せに必要 */
+    margin: 0 auto;    /* 左右を自動調整して中央配置 */
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 28px;
+      color: #068d2c;
+    }
+
+    p {
+      line-height: 1.8;
+      color: #000003;
+    }
+    
+    div {
+       line-height: 1.8;
+      color: #0c8f38;
+    }
+
+button{
+      color: #1417df;
+    }
+
+    ol{
+      color: #df14ac;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="card1">
+    <img src="cat.webp" alt="写真">
+
+    <h1>猫</h1>
+
+    <p>
+      これは<span style=" color:#ff0000;font-size: 20px">写真とタイトル</span>、そして<span style=" color:#ff0000;font-size:20px">文章</span>を表示するだけのシンプルなウェブページです。<br>
+      HTMLとCSSだけで作られており、初心者でも編集しやすい構成になっています。
+    </p>
+</div>
+<br>
+<br>
+<div class="card2">
+  <p>
+    好きな食べ物
+   <button onclick="today()">今日の日付を表示</button>
+
+<p id="result"></p>
+
+</p>
+<ol>
+  <li>エビ</li>
+  <li>カニ</li>
+  <li>肉</li>
+</ol>
+</div>
+
+</body>
+</html>
