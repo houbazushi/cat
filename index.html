@@ -4,55 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>猫</title>
-<script>
-  function today() {
-    const now = new Date();
+  <script>
+    function today() {
+      const now = new Date();
+      const month = now.getMonth() + 1; // 月（0から始まるので+1）
+      const day = now.getDate();         // 日
 
-    const month = now.getMonth() + 1; // 月（0から始まるので+1）
-    const day = now.getDate();        // 日
-
-    document.getElementById("result").textContent =
-      "今日は" + month + "月" + day + "日です";
-  }
-</script>
+      document.getElementById("result").textContent =
+        "今日は" + month + "月" + day + "日です";
+    }
+  </script>
 
   <style>
-   body {
-  font-family: sans-serif;
-  background-color: #8fd321;
-  margin: 0;
-  padding: 16px;
-}
+    body {
+      font-family: sans-serif;
+      background-color: #8fd321;
+      margin: 0;
+      padding: 16px;
+    }
 
-   .card1 {
-  width: 100%;
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  box-sizing: border-box;
-}
+    .card1, .card2 {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto 24px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
 
-.card2 {
-  width: 100%;
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  box-sizing: border-box;
-}
+    /* 画像のはみ出し防止修正 */
+    img {
+      max-width: 100%; /* 親要素を超えないように制限 */
+      width: min(100%, 300px); /* 画面サイズに合わせて自動調整（最大300px） */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
 
-   img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
     h1 {
       margin-top: 20px;
       font-size: 28px;
@@ -63,36 +53,35 @@
       line-height: 1.8;
       color: #000003;
     }
-    
+
     div {
-       line-height: 1.8;
+      line-height: 1.8;
       color: #0c8f38;
     }
 
-button{
+    button {
       color: #1417df;
     }
 
-    ol{
+    ol {
       color: #df14ac;
     }
 
     @media (max-width: 600px) {
-  h1 {
-    font-size: 24px;
-  }
+      h1 {
+        font-size: 24px;
+      }
 
-  p {
-    font-size: 15px;
-  }
+      p {
+        font-size: 15px;
+      }
 
-  button {
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-  }
-}
-
+      button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 
@@ -104,26 +93,24 @@ button{
     <h1>猫</h1>
 
     <p>
-      これは<span style=" color:#ff0000;font-size: 20px">写真とタイトル</span>、そして<span style=" color:#ff0000;font-size:20px">文章</span>を表示するだけのシンプルなウェブページです。<br>
+      これは<span style="color:#ff0000; font-size: 20px;">写真とタイトル</span>、そして<span style="color:#ff0000; font-size:20px;">文章</span>を表示するだけのシンプルなウェブページです。<br>
       HTMLとCSSだけで作られており、初心者でも編集しやすい構成になっています。
     </p>
-</div>
-<br>
-<br>
-<div class="card2">
-  <p>好きな食べ物</p>
-  
-   <button onclick="today()">今日の日付を表示</button>
+  </div>
 
-<p id="result"></p>
+  <div class="card2">
+    <p>好きな食べ物</p>
 
-</p>
-<ol>
-  <li>エビ</li>
-  <li>カニ</li>
-  <li>肉</li>
-</ol>
-</div>
+    <button onclick="today()">今日の日付を表示</button>
+
+    <p id="result"></p>
+
+    <ol>
+      <li>エビ</li>
+      <li>カニ</li>
+      <li>肉</li>
+    </ol>
+  </div>
 
 </body>
 </html>
